@@ -70,18 +70,16 @@ def getInfoView():
     if rv is None:
         return 'ERROR FIND'
     rv = rv[0]
-    name = rv[1]
-    studentid = rv[2]
-    sex = rv[3]
-    socialid = rv[4]
-    special = rv[5]
-    college = rv[6]
+    sname = rv[1]
+    sstudentid = rv[2]
+    ssex = rv[3]
+    ssocialid = rv[4]
+    sspecial = rv[5]
+    scollege = rv[6]
     return jsonify(
-        {
-            name=name,
-            studentid=studentid,
-            sex=sex,
-            socialid=socialid,
-            special=special,
-            college=college
-        })
+        name=sname,
+        studentid=sstudentid,
+        sex=ssex,
+        socialid=ssocialid,
+        special=sspecial,
+        college=scollege)
