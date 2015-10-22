@@ -76,12 +76,6 @@ def getInfoView():
     socialid = rv[4]
     special = rv[5]
     college = rv[6]
-    return jsonify(
-        {
-            "name": name,
-            "studentid": studentid,
-            "sex": sex,
-            "socialid": socialid,
-            "special": special,
-            "college": college
-        })
+    return
+        "{\"name\": %s,\"studentid\": %s,\"sex\": %s,\"socialid\": %s,\"special\": %s,\"college\": %s}" % (
+            name, studentid, sex, socialid, special, college)
