@@ -90,7 +90,7 @@ def getInfoView():
 def getPicture():
     studentid = request.form['studentid']
     studentid += '.JPG'
-    picture = open('./static/me.png')
+    picture = open('static/me.png')
     p = picture.read()
     picture.close()
     return p
