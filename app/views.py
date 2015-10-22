@@ -88,8 +88,8 @@ def getInfoView():
 @app.route('/picture', methods=['GET', 'POST'])
 @crossdomain(origin='*')
 def getPicture():
-    studentid = request.form['studentid']
-    studentid += '.JPG'
+    #studentid = request.form['studentid']
+    #studentid += '.JPG'
     picture = open('app/static/me.png')
     p = picture.read()
     picture.close()
