@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from datetime import timedelta
 from app import app
-from flask import render_template, make_response, request, current_app, jsonify
+from flask import render_template, make_response, request, current_app, jsonify, Response
 from functools import update_wrapper
 import sys
 import sqlite3_db
@@ -90,7 +90,7 @@ def getInfoView():
 def getPicture():
     studentid = request.form['studentid']
     studentid += '.JPG'
-    picture = open('static/me.png')
+    picture = open('app/static/me.png')
     p = picture.read()
     picture.close()
-    return p
+    return Response(p, mimetype='image/png')
